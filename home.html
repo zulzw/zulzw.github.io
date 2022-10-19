@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background: linear-gradient(to right, black , black, rgb(66, 66, 66));">
+    <nav>
+        <div class="div1">
+            <div class="logo"><a href="https://web.facebook.com/zulzw25/">ZulZW</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card-deskripsi">
+            <div class="title">Ujian Tengah Semester</div>
+            <div class="title-1">Pemrograman WEB</div>
+            <div class="deskripsi"><p>Website ini terdapat 4 bagian yaitu Home, Biodata, Contact dan Dashboard</p></div>
+        </div>
+        <div class="w3-content w3-display-container">
+            <img class="gambar" src="img/xiao.png">
+            <img class="gambar" src="img/kazuha.png">
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("gambar");
+
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 4000); 
+        }
+    </script>
+</body>
+</html>

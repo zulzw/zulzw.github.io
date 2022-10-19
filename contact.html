@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: grey;">
+    <nav>
+        <div class="div1">
+            <div class="logo"><a href="https://web.facebook.com/zulzw25/">ZulZW</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+ <div class="container1">
+    <div class="card-contact">
+            <div class="contact-title">CONTACT</div>
+            <div class="contact-title-2">ME <hr class="hr2"></div>
+            <div class="icon-contact">
+                <a href="https://web.facebook.com/zulzw25/"target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="https://www.instagram.com/zulzw/"target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.youtube.com/channel/UC0EX68DhXbnEuTQSiCCpGOg" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <div class="garis-vertical"></div>
+            <div class="card-form">
+              <form>
+                <div class="input">
+                    <div class="input-isi">
+                        <input type="text" class="form_username" placeholder="Nama..." id="name" autocomplete="off">
+                        <p class="nama">Kolom ini tidak boleh kosong!</p>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input-isi">
+                        <input type="email" class="form_username" placeholder="email..." id="email" autocomplete="off">
+                        <p class="email">Kolom ini tidak boleh kosong!</p>
+                    </div>
+                </div>
+                <textarea id="teks" class="form_pesan" placeholder="Isi Pesan....."></textarea>
+                <div class="btn-login"><input type="button" class="btn" value="KIRIM" onclick="contact()"></div>
+            </form> 
+            </div>
+    </div>
+</div>
+
+<script>
+
+    function contact() {
+        var pesan = document.getElementById("teks").value
+        var nama = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var pesan_nama = document.querySelector(".nama");
+        var pesan_email = document.querySelector(".email");
+        if (pesan != "" && nama != "" && email != "") {
+            window.alert("Pesan Terkirim")
+        } else {
+            window.alert("Pesan Gagal Terkirim")
+        }
+
+        if (nama == "" && email == "") {
+            pesan_nama.style.display = "inline-block"
+            pesan_email.style.display = "inline-block"
+        }
+        else if (nama != "" && email != "") {
+            pesan_nama.style.display = "none"
+            pesan_email.style.display = "none"
+        }
+        else if (email == "" && nama != "") {
+            pesan_email.style.display = "inline-block"
+            pesan_nama.style.display = "none"
+        }
+        else if (nama == "" && email != "") {
+            pesan_nama.style.display = "inline-block"
+            pesan_email.style.display = "none"
+        }
+        else {
+            return 0;
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
