@@ -182,6 +182,7 @@ hr {
     color: #b33a3a;
     width: 800px;
     font-size: 45pt;
+    cursor: default;
 }
 
 .title:hover, .title-1:hover{
