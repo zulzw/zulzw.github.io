@@ -38,19 +38,19 @@
               <form>
                 <div class="input">
                     <div class="input-isi">
-                        <input type="text" class="form_username" placeholder="Nama..." id="name" autocomplete="off">
+                        <input type="text" class="form_username" placeholder="Nama..." id="name" autocomplete="off" required>
                         <p class="nama">Kolom ini tidak boleh kosong!</p>
                     </div>
                 </div>
 
                 <div class="input">
                     <div class="input-isi">
-                        <input type="email" class="form_username" placeholder="email..." id="email" autocomplete="off">
+                        <input type="email" class="form_username" placeholder="email..." id="email" autocomplete="off" required>
                         <p class="email">Kolom ini tidak boleh kosong!</p>
                     </div>
                 </div>
                 <textarea id="teks" class="form_pesan" placeholder="Isi Pesan....."></textarea>
-                <div class="btn-login"><input type="button" class="btn" value="KIRIM" onclick="contact()"></div>
+                <div class="btn-login"><input type="button" class="btn" value="KIRIM" onclick="contact()" required></div>
             </form> 
             </div>
     </div>
